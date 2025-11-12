@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancel Matys - Cybersecurity Expert</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Canvas pour l'animation de particules -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Bouton de thème -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <!-- Header avec photo de profil -->
+        <header class="header" id="header">
+            <div class="header-bg"></div>
+            <div class="header-content">
+                <div class="profile-photo-wrapper">
+                    <div class="profile-photo">
+                        <img src="https://ui-avatars.com/api/?name=Mancel+Matys&size=200&background=0ea5e9&color=fff&bold=true" alt="Mancel Matys">
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring-2"></div>
+                    </div>
+                </div>
+                <h1 class="glitch" data-text="Mancel Matys">Mancel Matys</h1>
+                <div class="typing-container">
+                    <p class="typing-text" id="typing-text"></p>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="header-info">
+                    <span><i class="fas fa-graduation-cap"></i> Guardia Cybersecurity School | Paris</span>
+                    <span><i class="fas fa-birthday-cake"></i> 19 ans</span>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:mancel.matys@email.com" class="contact-btn" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:0612345678" class="contact-btn" data-tooltip="Téléphone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#" class="contact-btn" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="contact-btn" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <section class="sidebar-section animate-on-scroll">
+                    <h2><i class="fas fa-user-secret"></i> Profil <span class="badge-new">GOAT 🐐</span></h2>
+                    <p>Étudiant de <strong>1ère année</strong> passionné par la cybersécurité et les technologies de l'information. Curieux, rigoureux et motivé à développer mes compétences dans la protection des systèmes informatiques et l'analyse des menaces.</p>
+                    <p style="margin-top: 15px;">Depuis mon adolescence, je suis fasciné par l'univers du hacking éthique et la sécurité informatique. Mon parcours en STI2D SIN m'a permis de développer une solide base technique en programmation et réseaux.</p>
+                    <div class="secret-unlock" id="secret-1" data-secret="1">
+                        <i class="fas fa-lock"></i> <span>Cliquez pour débloquer un secret...</span>
+                    </div>
+                </section>
+
+                <section class="sidebar-section animate-on-scroll">
+                    <h2><i class="fas fa-code"></i> Compétences</h2>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersécurité</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux / Windows</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Réseaux</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-python"></i>
+                            <span>Python / Bash</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-tools"></i>
+                            <span>Outils Pentesting</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-search"></i>
+                            <span>OSINT</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Git / GitHub</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sidebar-section animate-on-scroll">
+                    <h2><i class="fas fa-language"></i> Langues</h2>
+                    <div class="language-item">
+                        <span>🇫🇷 Français</span>
+                        <div class="language-level">
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <span>🇬🇧 Anglais</span>
+                        <div class="language-level">
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="far fa-circle"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sidebar-section animate-on-scroll">
+                    <h2><i class="fas fa-heart"></i> Passions</h2>
+                    <div class="passion-item">
+                        <i class="fas fa-gamepad"></i>
+                        <div>
+                            <strong>Jeux Vidéo</strong>
+                            <p>FPS compétitifs, RPG, jeux de stratégie. Analyse de game design et mécaniques de jeu.</p>
+                        </div>
+                    </div>
+                    <div class="passion-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <strong>Informatique</strong>
+                            <p>Développement, scripting, administration système. Veille technologique constante.</p>
+                        </div>
+                    </div>
+                    <div class="passion-item">
+                        <i class="fas fa-space-shuttle"></i>
+                        <div>
+                            <strong>Astronomie</strong>
+                            <p>Observation du ciel, astrophysique, exploration spatiale. Fan de SpaceX et NASA.</p>
+                        </div>
+                    </div>
+                    <div class="passion-item clickable-passion" data-passion="osint">
+                        <i class="fas fa-search"></i>
+                        <div>
+                            <strong>OSINT Master 🔍</strong>
+                            <p>Recherche d'informations, analyse de données publiques, géolocalisation. Cliquez pour en savoir plus!</p>
+                        </div>
+                    </div>
+                    <div class="interests" style="margin-top: 15px;">
+                        <span class="interest-tag"><i class="fas fa-flag"></i> CTF</span>
+                        <span class="interest-tag"><i class="fas fa-user-secret"></i> Ethical Hacking</span>
+                        <span class="interest-tag"><i class="fab fa-osi"></i> Open-Source</span>
+                        <span class="interest-tag"><i class="fas fa-microchip"></i> Hardware</span>
+                        <span class="interest-tag"><i class="fas fa-rocket"></i> Space Tech</span>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Main content -->
+            <main class="main-content">
+                <section class="main-section animate-on-scroll">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Formation
+                    </h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 - 2027</span>
+                                <h3>Guardia Cybersecurity School</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Paris</p>
+                                <p>Bachelor en Cybersécurité — formation complète sur la sécurité réseau, la cryptographie, la programmation sécurisée et la gestion des incidents.</p>
+                                <div class="tags">
+                                    <span class="tag">Cryptographie</span>
+                                    <span class="tag">Sécurité Réseau</span>
+                                    <span class="tag">OSINT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024</span>
+                                <h3>Baccalauréat STI2D</h3>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Lycée Louis Armand, Paris</p>
+                                <p>Spécialité SIN (Systèmes d'Information et Numérique) — Formation orientée informatique, programmation, réseaux et systèmes embarqués.</p>
+                                <div class="tags">
+                                    <span class="tag">Programmation</span>
+                                    <span class="tag">Réseaux</span>
+                                    <span class="tag">Arduino</span>
+                                    <span class="tag">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-section animate-on-scroll">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram"></i>
+                        Projets & Expériences
+                    </h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Home Lab de cybersécurité</h3>
+                            <span class="project-date">2025</span>
+                            <p>Création d'un environnement virtuel de tests avec plusieurs machines (Kali Linux, Metasploitable, Windows Server) pour s'entraîner aux techniques d'analyse et de défense.</p>
+                            <div class="project-stats">
+                                <span><i class="fas fa-desktop"></i> 5 VMs</span>
+                                <span><i class="fas fa-network-wired"></i> Multi-réseau</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Participation à des CTF</h3>
+                            <span class="project-date">2024 - Présent</span>
+                            <p>Résolution de défis de cybersécurité sur des plateformes comme TryHackMe et HackTheBox : exploitation de failles, analyse réseau et forensic.</p>
+                            <div class="project-stats">
+                                <span><i class="fas fa-flag-checkered"></i> 50+ challenges</span>
+                                <span><i class="fas fa-star"></i> Top 15%</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3>Projets Arduino & Raspberry Pi</h3>
+                            <span class="project-date">2023 - 2024</span>
+                            <p>Développement de projets STI2D : station météo connectée, système domotique, robot autonome. Programmation C/C++ et Python.</p>
+                            <div class="project-stats">
+                                <span><i class="fas fa-code"></i> C/C++/Python</span>
+                                <span><i class="fas fa-wifi"></i> IoT</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Développement de jeux</h3>
+                            <span class="project-date">2024</span>
+                            <p>Création de petits jeux en Python avec Pygame : Snake, Pong, Space Invaders. Apprentissage de la logique de programmation et de l'algorithmique.</p>
+                            <div class="project-stats">
+                                <span><i class="fab fa-python"></i> Python/Pygame</span>
+                                <span><i class="fas fa-code-branch"></i> GitHub</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-telescope"></i>
+                            </div>
+                            <h3>Observation astronomique</h3>
+                            <span class="project-date">Depuis 2022</span>
+                            <p>Pratique de l'astrophotographie amateur. Utilisation de logiciels de traitement d'images stellaires. Membre d'un club d'astronomie.</p>
+                            <div class="project-stats">
+                                <span><i class="fas fa-camera"></i> Astrophoto</span>
+                                <span><i class="fas fa-moon"></i> Observation</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Veille en cybersécurité</h3>
+                            <span class="project-date">Continu</span>
+                            <p>Suivi quotidien de l'actualité cyber, lecture de blogs techniques, participation à des conférences et webinaires. Expérimentation de nouvelles techniques.</p>
+                            <div class="project-stats">
+                                <span><i class="fas fa-rss"></i> Veille active</span>
+                                <span><i class="fas fa-book"></i> Auto-formation</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- OSINT Section -->
+                <section class="main-section animate-on-scroll osint-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-search"></i>
+                        Expertise OSINT
+                        <span class="badge-elite">ELITE</span>
+                    </h2>
+                    <div class="osint-container">
+                        <p class="osint-intro">Passionné par l'Open Source Intelligence, je maîtrise l'art de collecter et analyser des informations publiques pour résoudre des enquêtes complexes.</p>
+                        <div class="osint-grid">
+                            <div class="osint-card" data-tool="geoint">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h4>GEOINT</h4>
+                                <p>Géolocalisation, analyse de métadonnées photos, Google Earth, satellites</p>
+                                <div class="osint-badge">Expert</div>
+                            </div>
+                            <div class="osint-card" data-tool="socmint">
+                                <i class="fab fa-twitter"></i>
+                                <h4>SOCMINT</h4>
+                                <p>Réseaux sociaux, profils, relations, analyse de graphes sociaux</p>
+                                <div class="osint-badge">Avancé</div>
+                            </div>
+                            <div class="osint-card" data-tool="webint">
+                                <i class="fas fa-globe"></i>
+                                <h4>WEBINT</h4>
+                                <p>Moteurs de recherche, Google Dorks, archives web, dark web</p>
+                                <div class="osint-badge">Expert</div>
+                            </div>
+                            <div class="osint-card" data-tool="tools">
+                                <i class="fas fa-toolbox"></i>
+                                <h4>Outils OSINT</h4>
+                                <p>Maltego, TheHarvester, Shodan, SpiderFoot, Recon-ng</p>
+                                <div class="osint-badge">Maîtrisé</div>
+                            </div>
+                        </div>
+                        <button class="interactive-btn" id="osint-challenge-btn">
+                            <i class="fas fa-crosshairs"></i> Lancer un défi OSINT
+                        </button>
+                    </div>
+                </section>
+
+                <section class="main-section animate-on-scroll">
+                    <h2 class="section-title">
+                        <i class="fas fa-bullseye"></i>
+                        Objectif professionnel
+                    </h2>
+                    <div class="objective-card">
+                        <p>Développer mes compétences dans le domaine de la cybersécurité défensive et offensive, et intégrer à terme une entreprise spécialisée dans la sécurité des systèmes d'information ou un SOC (Security Operations Center).</p>
+                        <div class="objective-goals">
+                            <div class="goal-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Analyste SOC</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pentester</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expert en sécurité</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications Section -->
+                <section class="main-section animate-on-scroll">
+                    <h2 class="section-title">
+                        <i class="fas fa-certificate"></i>
+                        Certifications & Formations
+                    </h2>
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <div class="cert-badge"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>TryHackMe</h4>
+                            <p>Multiple rooms completed - Rank: Top 15%</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-badge"><i class="fas fa-cube"></i></div>
+                            <h4>HackTheBox</h4>
+                            <p>Active player - Machines pwned: 20+</p>
+                        </div>
+                        <div class="cert-card in-progress">
+                            <div class="cert-badge"><i class="fas fa-hourglass-half"></i></div>
+                            <h4>CompTIA Security+</h4>
+                            <p>En préparation</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Terminal Interactif -->
+                <section class="main-section animate-on-scroll terminal-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-terminal"></i>
+                        Terminal Interactif
+                        <span class="game-subtitle">Tapez 'help' pour commencer</span>
+                    </h2>
+                    <div class="terminal-container">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">matys@kali:~$</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-output">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">matys@kali:~$</span> <span class="terminal-text">Bienvenue sur mon CV interactif!</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">matys@kali:~$</span> <span class="terminal-text">Tapez 'help' pour voir les commandes disponibles...</span>
+                            </div>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">matys@kali:~$</span>
+                            <input type="text" id="terminal-input" class="terminal-input" placeholder="Tapez une commande..." autocomplete="off">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mini Game Section -->
+                <section class="main-section animate-on-scroll game-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-gamepad"></i>
+                        Mini-Jeu : Hack The System
+                        <span class="game-subtitle">Déchiffrez le code !</span>
+                    </h2>
+                    <div class="game-container">
+                        <div class="game-info">
+                            <p>🎯 <strong>Mission:</strong> Cliquez sur les nombres premiers pour décrypter le mot de passe</p>
+                            <div class="game-stats">
+                                <span>Score: <strong id="game-score">0</strong></span>
+                                <span>Niveau: <strong id="game-level">1</strong></span>
+                                <span>Temps: <strong id="game-time">60</strong>s</span>
+                            </div>
+                        </div>
+                        <div class="game-board" id="game-board"></div>
+                        <div class="game-controls">
+                            <button class="game-btn" id="start-game"><i class="fas fa-play"></i> Commencer</button>
+                            <button class="game-btn" id="reset-game"><i class="fas fa-redo"></i> Recommencer</button>
+                        </div>
+                        <div class="game-message" id="game-message"></div>
+                        <div class="game-highscore">
+                            <i class="fas fa-trophy"></i> Meilleur score: <strong id="high-score">0</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Memory Game Section -->
+                <section class="main-section animate-on-scroll game-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-brain"></i>
+                        Memory Cyber
+                        <span class="game-subtitle">Trouvez les paires !</span>
+                    </h2>
+                    <div class="game-container">
+                        <div class="game-info">
+                            <p>🧠 <strong>Mission:</strong> Trouvez toutes les paires d'icônes cybersécurité</p>
+                            <div class="game-stats">
+                                <span>Coups: <strong id="memory-moves">0</strong></span>
+                                <span>Temps: <strong id="memory-time">0</strong>s</span>
+                                <span>Meilleur: <strong id="memory-best">-</strong></span>
+                            </div>
+                        </div>
+                        <div class="memory-board" id="memory-board"></div>
+                        <div class="game-controls">
+                            <button class="game-btn" id="start-memory"><i class="fas fa-play"></i> Jouer</button>
+                            <button class="game-btn" id="reset-memory"><i class="fas fa-redo"></i> Recommencer</button>
+                        </div>
+                        <div class="game-message" id="memory-message"></div>
+                    </div>
+                </section>
+
+                <!-- Port Scanner Simulator -->
+                <section class="main-section animate-on-scroll scanner-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-radar"></i>
+                        Port Scanner Simulator
+                        <span class="game-subtitle">Simulez un scan de ports</span>
+                    </h2>
+                    <div class="scanner-container">
+                        <div class="scanner-input-group">
+                            <input type="text" id="scanner-target" class="scanner-input" placeholder="192.168.1.1" value="target.example.com">
+                            <button class="scanner-btn" id="start-scan"><i class="fas fa-search"></i> Scan</button>
+                        </div>
+                        <div class="scanner-output" id="scanner-output">
+                            <p class="scanner-ready">🎯 Prêt à scanner. Entrez une cible et cliquez sur Scan.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Root-Me Challenge -->
+                <section class="main-section animate-on-scroll rootme-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-flag-checkered"></i>
+                        Root-Me Challenge
+                        <span class="game-subtitle">Trouve le flag caché! 🚩</span>
+                    </h2>
+                    <div class="rootme-container">
+                        <div class="challenge-header">
+                            <div class="challenge-info">
+                                <h3>🚩 Challenge: "Hidden in Plain Sight"</h3>
+                                <p><strong>Difficulté:</strong> <span class="diff-medium">Moyen</span></p>
+                                <p><strong>Points:</strong> 50 pts</p>
+                                <p><strong>Catégorie:</strong> Web / OSINT</p>
+                            </div>
+                            <div class="challenge-description">
+                                <h4>Description du challenge:</h4>
+                                <p>Un flag est caché quelque part dans ce CV. Utilisez toutes vos compétences en OSINT, inspection de code, et décodage pour le trouver.</p>
+                                <p class="challenge-hint">💡 <strong>Indice 1:</strong> Les développeurs laissent parfois des commentaires intéressants...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-progress">
+                            <div class="progress-step" id="step-1">
+                                <i class="fas fa-lock"></i>
+                                <span>Étape 1: Inspection</span>
+                            </div>
+                            <div class="progress-step" id="step-2">
+                                <i class="fas fa-lock"></i>
+                                <span>Étape 2: Décodage</span>
+                            </div>
+                            <div class="progress-step" id="step-3">
+                                <i class="fas fa-lock"></i>
+                                <span>Étape 3: Validation</span>
+                            </div>
+                        </div>
+
+                        <div class="hint-system">
+                            <button class="hint-btn" id="hint-btn-1" data-hint="1">
+                                <i class="fas fa-lightbulb"></i> Indice 2 (Coût: 5 pts)
+                            </button>
+                            <button class="hint-btn" id="hint-btn-2" data-hint="2">
+                                <i class="fas fa-lightbulb"></i> Indice 3 (Coût: 10 pts)
+                            </button>
+                            <button class="hint-btn" id="hint-btn-3" data-hint="3">
+                                <i class="fas fa-lightbulb"></i> Solution (Coût: 30 pts)
+                            </button>
+                        </div>
+
+                        <div class="hint-display" id="hint-display"></div>
+
+                        <div class="flag-submit">
+                            <input type="text" id="flag-input" class="flag-input" placeholder="RM{votre_flag_ici}" autocomplete="off">
+                            <button class="flag-btn" id="submit-flag">
+                                <i class="fas fa-flag"></i> Valider le Flag
+                            </button>
+                        </div>
+
+                        <div class="challenge-message" id="challenge-message"></div>
+
+                        <div class="leaderboard">
+                            <h4><i class="fas fa-crown"></i> Leaderboard</h4>
+                            <div class="leaderboard-list" id="leaderboard"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Achievement Badges -->
+                <section class="main-section animate-on-scroll badges-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-trophy"></i>
+                        Badges & Achievements
+                        <span class="game-subtitle">Débloquez-les tous!</span>
+                    </h2>
+                    <div class="badges-grid" id="badges-container">
+                        <!-- Badges will be generated by JS -->
+                    </div>
+                </section>
+
+                <!-- Stats Section -->
+                <section class="stats-section animate-on-scroll">
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <div class="stat-number" data-target="1500">0</div>
+                        <p>Heures de code</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-flag"></i>
+                        <div class="stat-number" data-target="50">0</div>
+                        <p>CTF résolus</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="stat-number" data-target="25">0</div>
+                        <p>Projets réalisés</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-number" data-target="100">0</div>
+                        <p>Commits GitHub</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Mancel Matys — Cybersecurity Student</p>
+            <p class="footer-quote">"Hack the planet, protect the future"</p>
+        </footer>
+    </div>
+
+    <!-- 
+        Félicitations pour avoir inspecté le code source ! 
+        Vous avez débloqué l'étape 1 du challenge.
+        
+        Indice: Le flag est encodé en base64. Voici une partie: Uk0=
+        
+        Pour continuer, cherchez dans les métadonnées...
+        data-secret="T1NJTlRfTTRTVDNSXzIwMjU="
+    -->
+    
+    <div style="display:none;" data-secret="T1NJTlRfTTRTVDNSXzIwMjU=" id="hidden-data"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
